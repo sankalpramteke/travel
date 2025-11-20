@@ -1,62 +1,109 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-sky-50">
+    <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-slate-50">
+      {/* Top navigation */}
+      <header className="border-b border-slate-100/80 bg-white/80 backdrop-blur">
+        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-2">
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-emerald-600 text-sm font-semibold text-white">
+              W
+            </span>
+            <div>
+              <p className="text-sm font-semibold tracking-tight text-slate-900">
+                WanderWorld
+              </p>
+              <p className="text-[11px] text-slate-500">
+                Tours & Holidays
+              </p>
+            </div>
+          </div>
+          <div className="hidden items-center gap-6 text-xs font-medium text-slate-600 md:flex">
+            <a href="#featured" className="hover:text-slate-900">
+              Featured
+            </a>
+            <a href="#find" className="hover:text-slate-900">
+              Find a package
+            </a>
+            <a href="#my-packages" className="hover:text-slate-900">
+              My packages
+            </a>
+            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-medium text-emerald-700">
+              • Chatbot live
+            </span>
+          </div>
+        </nav>
+      </header>
+
       {/* Hero */}
-      <header className="relative overflow-hidden border-b border-sky-100 bg-gradient-to-b from-sky-50 via-white to-sky-100">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 md:flex-row md:items-center md:py-24">
+      <section className="relative overflow-hidden border-b border-emerald-100/60 bg-gradient-to-b from-emerald-50/80 via-white to-slate-50">
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.18),transparent_55%),radial-gradient(circle_at_bottom,_rgba(52,211,153,0.16),transparent_55%)] md:block" />
+
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 py-12 md:flex-row md:items-center md:py-20">
           <div className="flex-1 space-y-6">
-            <p className="inline rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700">
-              Tours & Holidays
+            <p className="inline rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200">
+              Tours & Holidays • AI assisted
             </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
-              Plan your next getaway in minutes.
+            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl lg:text-[2.9rem] lg:leading-tight">
+              Plan your next getaway in{" "}
+              <span className="bg-gradient-to-r from-emerald-600 to-lime-500 bg-clip-text text-transparent">
+                just a few messages.
+              </span>
             </h1>
-            <p className="max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
-              Discover curated tour packages, compare itineraries, and manage all
-              your trips from one place. Built to work seamlessly with your
-              SalesIQ/Cliq chatbot.
+            <p className="max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">
+              Pick a destination, share your dates and budget, and let the bot do
+              the planning. A simple tour page built just for CliqTrix.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button className="rounded-full bg-sky-600 px-6 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-sky-700">
+              <a
+                href="#find"
+                className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700"
+              >
                 Find a package
-              </button>
-              <button className="rounded-full border border-sky-200 bg-white px-6 py-2.5 text-sm font-medium text-sky-700 transition hover:border-sky-300 hover:bg-sky-50">
+              </a>
+              <a
+                href="#my-packages"
+                className="inline-flex items-center justify-center rounded-full border border-emerald-200 bg-white px-6 py-2.5 text-sm font-medium text-emerald-700 transition hover:border-emerald-300 hover:bg-emerald-50/40"
+              >
                 View my bookings
-              </button>
+              </a>
             </div>
-            <p className="text-xs text-slate-500">
-              Chatbot integration ready – just drop in your widget snippet.
+            <p className="text-[11px] text-slate-500">
+              Zoho SalesIQ live chat is already embedded in the bottom-right
+              corner.
             </p>
           </div>
 
           {/* Chatbot placeholder */}
           <div className="flex-1">
-            <div className="mx-auto max-w-md rounded-3xl border border-dashed border-sky-200 bg-white/80 p-5 shadow-sm backdrop-blur">
-              <p className="text-xs font-semibold uppercase tracking-wide text-sky-600">
-                Chatbot preview
+            <div className="mx-auto max-w-md rounded-3xl border border-slate-100 bg-white/80 p-5 shadow-lg shadow-emerald-100 backdrop-blur">
+              <p className="text-xs font-semibold uppercase tracking-wide text-emerald-600">
+                Chatbot experience
               </p>
               <div className="mt-3 space-y-2 rounded-2xl bg-sky-50 p-4 text-sm text-slate-700">
                 <p className="font-medium">Hi there! 👋</p>
                 <p>
-                  I can help you find featured packages, suggest trips based on
+                  I can help you discover featured packages, suggest trips based on
                   your budget and dates, and pull up your previous bookings.
                 </p>
               </div>
-              <div className="mt-3">
-                <div className="h-9 rounded-full border border-slate-200 bg-white px-3 text-xs text-slate-400 flex items-center">
+              <div className="mt-3 flex items-center gap-2">
+                <div className="flex-1 h-9 rounded-full border border-slate-200 bg-white px-3 text-xs text-slate-400 flex items-center">
                   Type your message…
                 </div>
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald-600 text-xs font-semibold text-white">
+                  ↗
+                </span>
               </div>
               <p className="mt-3 text-[11px] text-slate-400">
-                Replace this card with your actual Zoho SalesIQ / Cliq embed
-                script.
+                This is just a preview. The real widget is powered by Zoho
+                SalesIQ and is already active.
               </p>
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
-      <main className="mx-auto max-w-6xl px-6 py-12 space-y-16">
+      <main className="mx-auto max-w-6xl px-6 py-12 space-y-14">
         {/* Featured packages */}
         <section id="featured">
           <div className="flex items-center justify-between gap-4">
@@ -64,54 +111,50 @@ export default function Home() {
               Featured packages
             </h2>
             <p className="text-xs text-slate-500">
-              These can be fetched from your CRM, Google Sheets, or any external
-              app.
+              A few example trips your bot can suggest.
             </p>
           </div>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <article className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-md">
+            <article className="group flex flex-col rounded-3xl border border-slate-100 bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md hover:ring-emerald-100">
               <h3 className="text-sm font-semibold text-slate-900">
                 Bali Beach Escape
               </h3>
               <p className="mt-2 flex-1 text-sm text-slate-600">
-                5 nights in Seminyak with private transfers, daily breakfast,
-                and island tour.
+                Sun, surf, and rice terraces in one compact escape.
               </p>
-              <div className="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
                 <span>5 days • From $899</span>
-                <button className="text-xs font-semibold text-sky-600 hover:text-sky-700">
+                <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
                   Get details
                 </button>
               </div>
             </article>
 
-            <article className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-md">
+            <article className="group flex flex-col rounded-3xl border border-slate-100 bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md hover:ring-emerald-100">
               <h3 className="text-sm font-semibold text-slate-900">
                 Swiss Alps Explorer
               </h3>
               <p className="mt-2 flex-1 text-sm text-slate-600">
-                Scenic rail journey through Zurich, Interlaken, and Lucerne with
-                guided tours.
+                Lakes, peaks, and postcard towns by scenic rail.
               </p>
-              <div className="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
                 <span>7 days • From $1,299</span>
-                <button className="text-xs font-semibold text-sky-600 hover:text-sky-700">
+                <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
                   Get details
                 </button>
               </div>
             </article>
 
-            <article className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-md">
+            <article className="group flex flex-col rounded-3xl border border-slate-100 bg-white/80 p-5 shadow-sm ring-1 ring-slate-100 transition hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md hover:ring-emerald-100">
               <h3 className="text-sm font-semibold text-slate-900">
                 Dubai City Break
               </h3>
               <p className="mt-2 flex-1 text-sm text-slate-600">
-                4 nights with desert safari, city tour, and Burj Khalifa entry
-                included.
+                City lights, desert dunes, and a quick luxury break.
               </p>
-              <div className="mt-3 flex items-center justify-between text-xs text-slate-500">
+              <div className="mt-4 flex items-center justify-between text-xs text-slate-500">
                 <span>4 days • From $749</span>
-                <button className="text-xs font-semibold text-sky-600 hover:text-sky-700">
+                <button className="text-xs font-semibold text-emerald-600 hover:text-emerald-700">
                   Get details
                 </button>
               </div>
@@ -126,9 +169,7 @@ export default function Home() {
               Find a package
             </h2>
             <p className="mt-2 text-sm text-slate-600">
-              Capture visitor preferences like destination, budget, dates, and
-              number of travelers. Your chatbot can then suggest the right
-              package and show it in a carousel card.
+              A tiny form the bot can use to suggest the right trip.
             </p>
             <form className="mt-6 grid gap-4 md:grid-cols-2">
               <div className="md:col-span-2">
@@ -177,33 +218,29 @@ export default function Home() {
                 />
               </div>
               <div className="md:col-span-2">
-                <button className="mt-2 w-full rounded-full bg-sky-600 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-sky-700 md:w-auto md:px-10">
-                  Ask chatbot to suggest packages
+                <button className="mt-2 w-full rounded-full bg-emerald-600 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-700 md:w-auto md:px-10">
+                  Let the bot suggest trips
                 </button>
               </div>
             </form>
           </div>
 
-          <div className="rounded-2xl border border-dashed border-sky-200 bg-sky-50/60 p-5 text-sm text-slate-700">
+          <div className="rounded-2xl border border-dashed border-emerald-200 bg-emerald-50/60 p-5 text-sm text-slate-700">
             <h3 className="text-sm font-semibold text-slate-900">
               How this works with your bot
             </h3>
             <ol className="mt-3 space-y-2 text-xs text-slate-700">
               <li>
-                1. Capture visitor preferences via this form or directly in the
-                chatbot.
+                1. Capture preferences here or directly in chat.
               </li>
               <li>
-                2. Call your CRM/sheets API to fetch matching packages and show
-                them as cards with a “Get details” action.
+                2. Fetch matching packages from CRM/sheets.
               </li>
               <li>
-                3. On “Get details”, collect visitor name/email/phone and create
-                a lead in your CRM.
+                3. On “Get details”, create a lead in your CRM.
               </li>
               <li>
-                4. Then share full itinerary, inclusions, and price breakdown in
-                the chat.
+                4. Share itinerary and price right inside the bot.
               </li>
             </ol>
           </div>
@@ -216,8 +253,7 @@ export default function Home() {
               My packages
             </h2>
             <p className="mt-2 text-sm text-slate-600">
-              Let returning visitors quickly pull up their previous bookings
-              using just their email address.
+              Visitors can quickly pull up previous bookings.
             </p>
             <form className="mt-5 space-y-3">
               <div>
@@ -241,21 +277,12 @@ export default function Home() {
 
           <div className="rounded-2xl border border-slate-100 bg-white p-5 text-sm text-slate-700 shadow-sm">
             <h3 className="text-sm font-semibold text-slate-900">
-              Brownie points (future enhancements)
+              Brownie points (ideas only)
             </h3>
             <ul className="mt-3 list-disc space-y-1 pl-5 text-xs">
-              <li>Verify phone number using OTP before confirming bookings.</li>
-              <li>
-                Use OAuth 2.0 when connecting to third-party CRMs or sheets.
-              </li>
-              <li>
-                Add AI suggestions like best season, visa tips, and packing
-                checklist for each destination.
-              </li>
-              <li>
-                Surface recently viewed packages and abandoned quotes in the
-                chat.
-              </li>
+              <li>OTP verification before confirming bookings.</li>
+              <li>OAuth 2.0 when talking to third‑party CRMs.</li>
+              <li>AI tips for best season, visas, and packing.</li>
             </ul>
           </div>
         </section>
