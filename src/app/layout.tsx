@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -29,6 +30,23 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {/* Zoho SalesIQ live chat widget */}
+        <Script
+          id="zoho-salesiq-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.$zoho = window.$zoho || {};
+              $zoho.salesiq = $zoho.salesiq || { ready: function() {} };
+            `,
+          }}
+        />
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zohopublic.in/widget?wc=siq21d5dbf3e5aed1f3b9a4d1b2fb90598e376267992f7ab046de528b8f28396cfb"
+          strategy="afterInteractive"
+          defer
+        />
       </body>
     </html>
   );
