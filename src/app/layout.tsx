@@ -43,7 +43,7 @@ export default function RootLayout({
         />
         <Script
           id="zsiqscript"
-          src="https://salesiq.zohopublic.in/widget?wc=siq21d5dbf3e5aed1f3b9a4d1b2fb90598e376267992f7ab046de528b8f28396cfb"
+          src="https://salesiq.zohopublic.in/widget?wc=siq8f957211606a7dff2d2807d6978fed542fdceb10944fae416963c05771723cdd"
           strategy="afterInteractive"
           defer
         />
